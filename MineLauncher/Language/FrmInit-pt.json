@@ -1,0 +1,8 @@
+{
+  "LauncherLoading": "Carregando...",
+  "LauncherUpdating": "Atualizando launcher...",
+  "RestartingLauncher": "Launcher atualizado! Reiniciando...",
+  "LauncherUpdateError": "Erro ao atualizar launcher. Por favor, tente novamente mais tarde.",
+  "ExternalConfigError": "Erro de carregamento de dados. Verifique a sua conex\u00E3o e tente novamente.",
+  "InitializationError": "Erro de inicializa\u00E7\u00E3o. Por favor, contate um administrador."
+}

@@ -1,0 +1,8 @@
+{
+  "LauncherLoading": "Loading...",
+  "LauncherUpdating": "Updating launcher...",
+  "RestartingLauncher": "Launcher updated! Restarting...",
+  "LauncherUpdateError": "Error occurred while updating launcher. Please, try again.",
+  "ExternalConfigError": "Can't load server data. Check your internet connection and try again.",
+  "InitializationError": "Initialization error. Please, contact an administrator."
+}
