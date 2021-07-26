@@ -32,6 +32,8 @@ namespace MineLauncher
             cmbLaunchers.SelectedIndexChanged += CmbLaunchers_SelectedIndexChanged;
             chkForceUpdate.CheckedChanged += ChkForceUpdate_CheckedChanged;
             wbNews.DocumentCompleted += WbNews_DocumentCompleted;
+            wbNews.NewWindow += WbNews_NewWindow;
+
             Shown += FrmMain_Shown;
 
             // Load form language domain
@@ -67,7 +69,7 @@ namespace MineLauncher
 
         private void WbNews_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            //newsLoaded = true;
+            wbNews.Document.MouseMove += Document_MouseMove;
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -1133,6 +1135,30 @@ namespace MineLauncher
         private void ChkForceUpdate_CheckedChanged(object sender, EventArgs e)
         {
             RefreshControls(true);
+        }
+
+        HtmlElement curElement;
+        private void Document_MouseMove(object sender, HtmlElementEventArgs e)
+        {
+            try
+            {
+                curElement = wbNews.Document.GetElementFromPoint(e.ClientMousePosition);
+            }
+            catch { }
+        }
+
+        private void WbNews_NewWindow(object sender, CancelEventArgs e)
+        {
+            e.Cancel = true;
+            try
+            {
+                if (curElement != null && curElement.TagName == "A")
+                {
+                    string href = curElement.GetAttribute("href");
+                    Process.Start(href);
+                }
+            }
+            catch { }
         }
         #endregion
     }

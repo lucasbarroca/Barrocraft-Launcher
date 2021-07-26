@@ -23,7 +23,7 @@ namespace MineLauncher
     class Config
     {
         [JsonConverter(typeof(VersionConverter))]
-        public Version CurrentLauncherVersion = new Version("1.1.1.0");
+        public Version CurrentLauncherVersion = new Version("1.2.0.0");
 
         [JsonConverter(typeof(StringEnumConverter))]
         public MinecraftLauncher LastSelectedLauncher = MinecraftLauncher.TLauncher;
