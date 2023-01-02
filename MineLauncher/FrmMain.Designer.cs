@@ -178,7 +178,6 @@ namespace MineLauncher
             this.wbNews.Name = "wbNews";
             this.wbNews.Size = new System.Drawing.Size(844, 413);
             this.wbNews.TabIndex = 2;
-            this.wbNews.Url = new System.Uri("https://buscacepinter.correios.com.br/app/endereco/index.php", System.UriKind.Absolute);
             // 
             // pbStatus
             // 
